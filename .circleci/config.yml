@@ -27,7 +27,7 @@ references:
         mkdir inst &&
         ./configure --prefix=inst --enable-shared --enable-obj --enable-dddmp &&
         make -j2 install &&
-        cd inst && tar czf "/artefacts/cudd-linux-x86_64-shared.vcosta.tar.gz &&
+        cd inst && tar czf /artefacts/cudd-linux-x86_64-shared.vcosta.tar.gz &&
         cd .. && rm -fr inst
 
   sm_distfile: &sm_distfile
