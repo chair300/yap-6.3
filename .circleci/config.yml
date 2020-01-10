@@ -20,7 +20,8 @@ references:
   sm_build_cudd_linux: &sm_build_cudd_linux
     run:
     command: |
-      cd cudd &&
+      ls -la &&
+      cd ~/cudd &&
       mkdir /artefacts &&
       mkdir inst &&
       ./configure --prefix=inst --enable-shared --enable-obj --enable-dddmp &&
