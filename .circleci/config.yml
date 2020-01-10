@@ -13,9 +13,9 @@ references:
     run:
       name: Checkout from the github
       command: >
-	git clone https://github.com/vscosta/cudd.git &&
-	git clone https://github.com/vscosta/doxygen-yap.git &&
-        git clone https://github.com/chair300/yap-6.3.git &&
+        git clone https://github.com/vscosta/cudd.git &&
+        git clone https://github.com/vscosta/doxygen-yap.git &&
+        git clone https://github.com/chair300/yap-6.3.git 
 	
 
   sm_build_cudd_linux: &sm_build_cudd_linux
