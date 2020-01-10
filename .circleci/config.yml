@@ -19,15 +19,16 @@ references:
 
   sm_build_cudd_linux: &sm_build_cudd_linux
     run:
-    command: |
-      ls -la &&
-      cd ~/cudd &&
-      mkdir /artefacts &&
-      mkdir inst &&
-      ./configure --prefix=inst --enable-shared --enable-obj --enable-dddmp &&
-      make -j2 install &&
-      cd inst && tar czf "/artefacts/cudd-linux-x86_64-shared.vcosta.tar.gz &&
-      cd .. && rm -fr inst
+      name: build cudd for linux
+      command: |
+        ls -la &&
+        cd ~/cudd &&
+        mkdir /artefacts &&
+        mkdir inst &&
+        ./configure --prefix=inst --enable-shared --enable-obj --enable-dddmp &&
+        make -j2 install &&
+        cd inst && tar czf "/artefacts/cudd-linux-x86_64-shared.vcosta.tar.gz &&
+        cd .. && rm -fr inst
 
   sm_distfile: &sm_distfile
     run:
