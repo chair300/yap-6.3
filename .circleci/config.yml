@@ -15,19 +15,18 @@ references:
       command: >
         git clone https://github.com/vscosta/cudd.git &&
         git clone https://github.com/vscosta/doxygen-yap.git &&
-        git clone https://github.com/chair300/yap-6.3.git 
-	
+        git clone https://github.com/chair300/yap-6.3.git
 
   sm_build_cudd_linux: &sm_build_cudd_linux
     run:
-    command: | 
+    command: |
       cd cudd &&
       mkdir /artefacts &&
       mkdir inst &&
       ./configure --prefix=inst --enable-shared --enable-obj --enable-dddmp &&
       make -j2 install &&
       cd inst && tar czf "/artefacts/cudd-linux-x86_64-shared.vcosta.tar.gz &&
-      cd .. && rm -fr inst 
+      cd .. && rm -fr inst
 
   sm_distfile: &sm_distfile
     run:
@@ -214,7 +213,7 @@ jobs:
 #      - *sm_compile_darwin
 #      - *sm_compile_freebsd11
 #      - *sm_compile_freebsd12
-      - *sm_compile_linux_clang
+#      - *sm_compile_linux_clang
 #      - *sm_run_cppcheck
 #      - *sm_compute_hashes
 
